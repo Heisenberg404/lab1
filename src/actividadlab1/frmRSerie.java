@@ -1,17 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package actividadlab1;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author 26
- */
+
 public class frmRSerie extends javax.swing.JFrame {
 
     float r1,r2,r3,rt;
@@ -119,11 +112,13 @@ public class frmRSerie extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        r1=Float.parseFloat(txtr1.getText());
-        r2=Float.parseFloat(txtr2.getText());
-        r3=Float.parseFloat(txtr3.getText());
-        rt=r1+r2+r3;
-        areaRT.setText("el resultado es: "+rt);
+        
+        CLresistencias obj = new CLresistencias();
+           r1=Float.parseFloat(txtr1.getText());
+           r2=Float.parseFloat(txtr2.getText());
+           r3=Float.parseFloat(txtr3.getText());
+           areaRT.setText("el resultado es: "+obj.calcularSerie(r1, r2, r3));
+           
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

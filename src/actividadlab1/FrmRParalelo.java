@@ -140,13 +140,14 @@ public class FrmRParalelo extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
-r1=Float.parseFloat(jTextField1.getText());
-r2=Float.parseFloat(jTextField2.getText());
-r3=Float.parseFloat(jTextField3.getText());
-rt=1/((1/r1)+(1/r2)+(1/r3));
-areaRT.setText("el resultado es: "+rt);
-
+    
+        
+           CLresistencias obj = new CLresistencias();
+           r1=Float.parseFloat(jTextField1.getText());
+           r2=Float.parseFloat(jTextField2.getText());
+           r3=Float.parseFloat(jTextField3.getText());
+           areaRT.setText("el resultado es: "+obj.calcularParalelo(r1, r2, r3));
+           
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed

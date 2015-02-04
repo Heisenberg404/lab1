@@ -8,10 +8,6 @@ package actividadlab1;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author 26
- */
 public class frmHipotenusa extends javax.swing.JFrame {
 
     float c1,c2,hp;
@@ -120,10 +116,13 @@ public class frmHipotenusa extends javax.swing.JFrame {
     }//GEN-LAST:event_txtc1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        c1=Float.parseFloat(txtc1.getText());
-        c2=Float.parseFloat(txtc2.getText());
-        hp=(float) Math.sqrt((Math.pow(c1, 2))+(Math.pow(c2, 2)));
-        areaHp.setText("La hipotenusa es: "+hp);
+  
+                CLhipotenusa obj = new CLhipotenusa();
+                c1=Float.parseFloat(txtc1.getText());
+                c2=Float.parseFloat(txtc2.getText());
+                areaHp.setText("La medida de la hipotenusa es: "+obj.calcularHipotenusa(c1, c2));
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
